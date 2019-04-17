@@ -1,6 +1,8 @@
 \documentclass[12pt]{article}
 \usepackage{amsmath}
 \usepackage{tikz}
+\usepackage{graphicx}
+\graphicspath{ {./images/} }
 \begin{document}
 \title{Statics Review}
 \author{Aditya Dangra}
@@ -54,7 +56,7 @@ Some relavent problems include:
 \end{itemize}
 
 \pagebreak
-\section{Force Vectors}
+\section{Chapter 2: Force Vectors}
 A \textbf{scalar} is any positive or negative quantity that can be specified by its \textit{magnitude}.
 A \textbf{vector} is any quantity that requires both a \textit{magnitude} and a \textit{direction} \cite{buckham}.
 A vector is shown graphically by an arrow indicating the sense of direction and an angle $\theta$ between the vector and a fixed axis.
@@ -80,6 +82,45 @@ Vectors can also be added component-wise, where the $x$-component of the resulta
 \end{tikzpicture}
 \caption{Adding two vectors \textit{tip to tail}}
 \end{figure}
+
+\subsubsection*{Vector Subtraction}
+Vector subtraction is defined as a special case of vector addition.
+Instead of being subtracted, the vector is multiplied by $-1$ and instead added (shown below).
+
+\begin{equation*}
+    \vec{R} = \vec{A} - \vec{B} = \vec{A} + \left(-\vec{B}\right)
+\end{equation*}
+
+\subsection{Force Components}
+Forces can be represented with magnitude and direction but it is usually easier to work with components in the $x$, $y$, and $z$ directions.
+It is possible to calculate the components using an angle and magnitude or with the \textbf{coordinate direction angles} $\alpha$ (alpha), $\beta$ (beta), and $\gamma$ (gamma).
+Coordinate direction angles are measured between the vector and the \textit{positive} $x$, $y$, and $z$ axes.
+$\alpha$, $\beta$, and $\gamma$ for a vector $\vec{A}$ are defined as:
+\begin{align*}
+    \cos{\alpha} &= \frac{A_x}{A} & \cos{\beta} &= \frac{A_y}{A} & \cos{\gamma} &= \frac{A_z}{A} \\
+\end{align*}
+The following identity also holds:
+\begin{equation*}
+    \cos^2{\alpha} + \cos^2{\beta} + cos^2{\gamma} = 1
+\end{equation*}
+Sometimes, the direction of a vector can be specified in terms of a \textbf{transverse angle} $\theta$ and an \textbf{azmuth angle} $\phi$, as shown in figure 2.
+The formula to find the components should not be memorized, instead determined by trigonometry.
+\begin{figure}[h]
+\centering
+\includegraphics[scale=0.7]{transverse_azmuth.png}
+\caption{A vector's direction in terms of $\theta$ and $\phi$ \cite{hibbeler}}
+\end{figure}
+\pagebreak
+
+\subsection{The Dot Product}
+The dot product can be used to find the angle between 2 vectors.
+Expressed in equation form:
+\begin{align*}
+    \vec{A}\cdot\vec{B} &= \left|\vec{A}\right|\left|\vec{B}\right|\cos{\theta} \\
+                        &= A_xB_x + A_yB_y + A_zB_z
+\end{align*}
+The magnitude of the projection of $\vec{A}$ onto $\vec{u_a}$ is determined from the dot product, $A_a = \vec{A}\cdot\vec{u_a}$.
+
 
 
 \pagebreak

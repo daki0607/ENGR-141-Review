@@ -111,7 +111,6 @@ The following identity also holds:
 \begin{equation*}
     \cos^2{\alpha} + \cos^2{\beta} + cos^2{\gamma} = 1
 \end{equation*}
-
 Sometimes, the direction of a vector can be specified in terms of a \textbf{transverse angle} $\theta$ and an \textbf{azimuth angle} $\phi$, as shown in figure 2.
 The formula to find the components should not be memorized, instead determined by trigonometry.
 
@@ -213,7 +212,7 @@ This principle states that any position vector $\vec{r}$ from point $O$ creates 
 \begin{figure}[h]
 \centering
 \begin{tikzpicture}
-    \draw[fill] (0, 2) circle [radius=0.07];
+    \draw[fill] (0, 2) circle [radius=0.1];
     \draw (-4, 0) -- (4, 0);
     \draw[line width=2pt, -stealth] (0, 2) -- (0, 4);
     \draw[line width=2pt, -stealth] (0, 2) -- (-3, 0) node[midway, above left] {$\vec{r}_1$};
@@ -228,6 +227,60 @@ This principle states that any position vector $\vec{r}$ from point $O$ creates 
 \end{tikzpicture}
 \caption{The principle of transmissibility.}
 \end{figure}
+
+\paragraph{}
+An influential, some might say famous \cite{buckham}, French man by the name of Pierre Varignon noticed that "the moment of a force about a point is equal to the sum of the moments of the components of the force about the point."
+This means that the moment of a component can be determined simply by using the right-hand rule with the thumb pointing in the direction of the moment.
+
+\subsection{Moment About an Axis}
+If the perpendicular distance $d_a$ to an axis $a$ is known, the moment about that axis is simply:
+\begin{equation*}
+    M_a = Fd_a
+\end{equation*}
+If the axis $a$ is defined by $\hat{u}_a$, the unit vector in the direction of the axis, a moment $\vec{M}_O$ can be found with $\vec{r} \times \vec{F}$.
+In this case, $\vec{r}$ is a vector from \textit{anywhere on the axis to anywhere on the force's line of action}.
+The component of $\vec{M}_O$ along the axis is found by $\vec{M}_O \cdot \hat{u}_a$ (finding "how much of $\vec{M}_O$ points in the direction of $\hat{u}_a$").
+
+\subsection{Couple Moments}
+\paragraph{}
+No, these do not involve long walks on the beach. 
+A \textbf{Couple Moment} is produced by a \textbf{Force Couple}, a pair of equal and opposite forces seperated by a distance $d$ or a vector $\vec{r}$ (Figure \ref{coupleMoment}).
+As a result, there is no net movement but a net rotation everywhere on the body (moments are free vectors \cite{buckham}).
+
+\begin{figure}[h]
+    \centering
+    \begin{tikzpicture}
+        \draw[line width=2pt, -stealth] (2, 1) -- (-2, 1) node[above] {$\vec{F}$};
+        \draw[line width=2pt, -stealth] (-2, -1) -- (2, -1) node[below] {$\vec{F}$};
+        \draw[<->] (0, -0.95) -- (0, 0.95) node[midway, right] {$d$};
+    \end{tikzpicture}
+    \caption{A Force Couple}
+    \label{coupleMoment}
+\end{figure}
+
+\paragraph{}
+When a force $\vec{F}$ is moved to another point $P$ not on its line of action, a couple moment is applied to the body.
+The couple moment is determined by taking the moment of the force about point $P$ \cite{hibbeler}.
+
+\paragraph{}
+Usually, a three-dimensional force and couple moment will not be perpendicular.
+Therefore, the furthest simplification of this system will be a point $P$ where only the component of moment in the direction of the force remains.
+This combination of resultant force $\vec{F}_R$ and collinear couple moment $\vec{M}_{\parallel}$ is called a \textbf{screwdriver}.
+The procedure to reduce a system to a wrench is usually as follows:
+\begin{itemize}
+    \item Find $\vec{F}_R$ and $(\vec{M}_R)_O$ about a point $O$
+    \item Resolve the couple moment $(\vec{M}_R)_O$ into components parallel and perpendicular to $\vec{F}_R$
+    \begin{itemize}
+        \item $\vec{M}_{\parallel}$ is found as the moment about the resultant force's line of action (moment about an axis)
+        \item $\vec{M}_{\perp}$ is found by observing:
+            \begin{align*}
+                & \vec{M}_R = \vec{M}_{\parallel} + \vec{M}_{\perp} \\
+                & \vec{M}_R - \vec{M}_{\parallel} = \vec{M}_{\perp}
+            \end{align*}
+        \item The location of $P$ is determined from $d = M_{\perp}/F_R$
+        \item Since $\vec{M}_{\parallel}$ is a free vector, it can be moved to point $P$
+    \end{itemize}
+\end{itemize}
 
 
 \pagebreak

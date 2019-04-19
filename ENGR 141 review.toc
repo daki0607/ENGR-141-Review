@@ -19,4 +19,10 @@
 \contentsline {subsection}{\numberline {4.2}Moments}{7}
 \contentsline {paragraph}{}{7}
 \contentsline {paragraph}{}{7}
-\contentsline {section}{References}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {subsection}{\numberline {4.3}Moment About an Axis}{8}
+\contentsline {subsection}{\numberline {4.4}Couple Moments}{8}
+\contentsline {paragraph}{}{8}
+\contentsline {paragraph}{}{9}
+\contentsline {paragraph}{}{9}
+\contentsline {section}{References}{10}
